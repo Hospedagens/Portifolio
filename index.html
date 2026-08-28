@@ -1,0 +1,2779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gustavo | Desenvolvedor Web</title>
+
+    <meta
+        name="description"
+        content="Portfólio profissional de Gustavo de Araújo Santos - Desenvolvedor Web especializado em criação de sites modernos."
+    >
+	
+	<link
+    rel="icon"
+    href="ICO.png"
+    type="image/jpeg"
+    >
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================
+           VARIÁVEIS
+        ========================================= */
+
+        :root {
+
+            --preto: #090909;
+            --preto-claro: #111111;
+            --cinza: #181818;
+            --cinza-claro: #2a2a2a;
+
+            --dourado: #d4af37;
+            --dourado-claro: #f5d76e;
+
+            --branco: #ffffff;
+            --texto: #bdbdbd;
+
+        }
+
+
+        /* =========================================
+           CONFIGURAÇÕES GERAIS
+        ========================================= */
+
+        html {
+
+            scroll-behavior:
+                smooth;
+
+            scroll-padding-top:
+                80px;
+
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                var(--preto);
+
+            color:
+                var(--branco);
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        a {
+
+            text-decoration:
+                none;
+
+            color:
+                inherit;
+
+        }
+
+
+        /* =========================================
+           SELEÇÃO
+        ========================================= */
+
+        ::selection {
+
+            background:
+                var(--dourado);
+
+            color:
+                #000;
+
+        }
+
+
+        /* =========================================
+           SCROLLBAR
+        ========================================= */
+
+        ::-webkit-scrollbar {
+
+            width:
+                8px;
+
+        }
+
+
+        ::-webkit-scrollbar-track {
+
+            background:
+                #080808;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background:
+                var(--dourado);
+
+            border-radius:
+                20px;
+
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        header {
+
+            width:
+                100%;
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            z-index:
+                1000;
+
+            background:
+                rgba(9, 9, 9, 0.85);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+        nav {
+
+            max-width:
+                1200px;
+
+            height:
+                80px;
+
+            margin:
+                auto;
+
+            padding:
+                0 25px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+
+            font-size:
+                24px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+        }
+
+
+        .logo span {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        /* =========================================
+           MENU
+        ========================================= */
+
+        .menu {
+
+            display:
+                flex;
+
+            list-style:
+                none;
+
+            gap:
+                30px;
+
+        }
+
+
+        .menu a {
+
+            color:
+                var(--texto);
+
+            font-size:
+                15px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .menu a:hover {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        /* =========================================
+           MENU MOBILE
+        ========================================= */
+
+        .menu-mobile {
+
+            display:
+                none;
+
+            font-size:
+                28px;
+
+            cursor:
+                pointer;
+
+            color:
+                var(--dourado);
+
+            user-select:
+                none;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            position:
+                relative;
+
+            padding:
+                120px 25px 70px;
+
+        }
+
+
+        .hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            background:
+                rgba(212, 175, 55, 0.08);
+
+            filter:
+                blur(120px);
+
+            border-radius:
+                50%;
+
+            top:
+                15%;
+
+            right:
+                -100px;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        .hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                300px;
+
+            height:
+                300px;
+
+            background:
+                rgba(212, 175, 55, 0.04);
+
+            filter:
+                blur(100px);
+
+            border-radius:
+                50%;
+
+            bottom:
+                0;
+
+            left:
+                -100px;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        .hero-container {
+
+            max-width:
+                1200px;
+
+            width:
+                100%;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.15fr 0.85fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+        }
+
+
+        .hero-tag {
+
+            display:
+                inline-block;
+
+            color:
+                var(--dourado);
+
+            font-size:
+                14px;
+
+            font-weight:
+                bold;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                20px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(45px, 7vw, 85px);
+
+            line-height:
+                1;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .hero h1 span {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        .hero p {
+
+            max-width:
+                600px;
+
+            color:
+                var(--texto);
+
+            font-size:
+                18px;
+
+            line-height:
+                1.7;
+
+            margin-bottom:
+                35px;
+
+        }
+
+
+        /* =========================================
+           BOTÕES
+        ========================================= */
+
+        .botoes {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .btn {
+
+            padding:
+                15px 25px;
+
+            border-radius:
+                8px;
+
+            font-weight:
+                bold;
+
+            transition:
+                0.3s;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .btn-primary {
+
+            background:
+                var(--dourado);
+
+            color:
+                #000;
+
+        }
+
+
+        .btn-primary:hover {
+
+            background:
+                var(--dourado-claro);
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(212, 175, 55, 0.25);
+
+        }
+
+
+        .btn-secondary {
+
+            border:
+                1px solid var(--cinza-claro);
+
+            color:
+                var(--branco);
+
+        }
+
+
+        .btn-secondary:hover {
+
+            border-color:
+                var(--dourado);
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        /* =========================================
+           FOTO DO GUSTAVO
+        ========================================= */
+
+        .foto-container {
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+        }
+
+
+        .foto-container::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                360px;
+
+            height:
+                360px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(212, 175, 55, 0.14);
+
+            filter:
+                blur(70px);
+
+            z-index:
+                0;
+
+        }
+
+
+        .foto-card {
+
+            width:
+                360px;
+
+            height:
+                470px;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            padding:
+                4px;
+
+            border-radius:
+                28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f5d76e,
+                    #d4af37,
+                    #6e5512,
+                    transparent
+                );
+
+            box-shadow:
+                0 35px 90px rgba(0, 0, 0, 0.65);
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .foto-card img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            display:
+                block;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center top;
+
+            border-radius:
+                24px;
+
+            background:
+                #111;
+
+            transition:
+                transform 0.6s ease;
+
+        }
+
+
+        .foto-card:hover img {
+
+            transform:
+                scale(1.04);
+
+        }
+
+
+        .foto-legenda {
+
+            position:
+                absolute;
+
+            left:
+                20px;
+
+            right:
+                20px;
+
+            bottom:
+                20px;
+
+            padding:
+                16px 18px;
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(5, 5, 5, 0.78);
+
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
+
+            border:
+                1px solid rgba(212, 175, 55, 0.35);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+
+        }
+
+
+        .foto-legenda strong {
+
+            display:
+                block;
+
+            color:
+                var(--branco);
+
+            font-size:
+                17px;
+
+            margin-bottom:
+                5px;
+
+        }
+
+
+        .foto-legenda span {
+
+            display:
+                block;
+
+            color:
+                var(--dourado);
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* =========================================
+           SEÇÕES
+        ========================================= */
+
+        section {
+
+            padding:
+                100px 25px;
+
+        }
+
+
+        .container {
+
+            max-width:
+                1200px;
+
+            margin:
+                auto;
+
+        }
+
+
+        .section-tag {
+
+            color:
+                var(--dourado);
+
+            font-size:
+                14px;
+
+            font-weight:
+                bold;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .section-title {
+
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            line-height:
+                1.1;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .section-description {
+
+            max-width:
+                700px;
+
+            color:
+                var(--texto);
+
+            line-height:
+                1.7;
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        /* =========================================
+           SOBRE
+        ========================================= */
+
+        .sobre-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                50px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .sobre-texto {
+
+            color:
+                var(--texto);
+
+            line-height:
+                1.8;
+
+            font-size:
+                17px;
+
+        }
+
+
+        .sobre-texto strong {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        /* =========================================
+           ESTATÍSTICAS
+        ========================================= */
+
+        .stats {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .stat {
+
+            background:
+                var(--preto-claro);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.06);
+
+            border-radius:
+                15px;
+
+            padding:
+                25px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .stat:hover {
+
+            border-color:
+                rgba(212, 175, 55, 0.5);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .stat h3 {
+
+            color:
+                var(--dourado);
+
+            font-size:
+                35px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .stat p {
+
+            color:
+                var(--texto);
+
+            font-size:
+                14px;
+
+        }
+
+
+        /* =========================================
+           SERVIÇOS
+        ========================================= */
+
+        .servicos-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .servico-card {
+
+            background:
+                var(--preto-claro);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.07);
+
+            border-radius:
+                18px;
+
+            padding:
+                30px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .servico-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(212, 175, 55, 0.6);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+        .servico-icon {
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            background:
+                rgba(212, 175, 55, 0.12);
+
+            border-radius:
+                12px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .servico-card h3 {
+
+            font-size:
+                21px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .servico-card p {
+
+            color:
+                var(--texto);
+
+            line-height:
+                1.7;
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =========================================
+           PROJETOS
+        ========================================= */
+
+        .projetos-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .projeto {
+
+            background:
+                var(--preto-claro);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius:
+                18px;
+
+            overflow:
+                hidden;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .projeto:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(212, 175, 55, 0.6);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.35);
+
+        }
+
+
+        /* =========================================
+           IMAGEM DOS PROJETOS
+        ========================================= */
+
+        .projeto-img {
+
+            height:
+                250px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #252525,
+                    #111
+                );
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .projeto-img img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center;
+
+            display:
+                block;
+
+            transition:
+                transform 0.5s ease;
+
+        }
+
+
+        .projeto:hover .projeto-img img {
+
+            transform:
+                scale(1.06);
+
+        }
+
+
+        /* =========================================
+           OVERLAY DO PROJETO
+        ========================================= */
+
+        .projeto-overlay {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                rgba(0, 0, 0, 0.55);
+
+            opacity:
+                0;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .projeto:hover .projeto-overlay {
+
+            opacity:
+                1;
+
+        }
+
+
+        .projeto-overlay span {
+
+            padding:
+                12px 20px;
+
+            border:
+                1px solid var(--dourado);
+
+            border-radius:
+                8px;
+
+            color:
+                var(--dourado);
+
+            background:
+                rgba(0, 0, 0, 0.7);
+
+            font-weight:
+                bold;
+
+        }
+
+
+        /* =========================================
+           PROJETO SEM IMAGEM
+        ========================================= */
+
+        .projeto-img-sem-imagem {
+
+            height:
+                250px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #252525,
+                    #111
+                );
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .projeto-img-sem-imagem img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center;
+
+            display:
+                block;
+
+            transition:
+                transform 0.5s ease;
+
+        }
+
+
+        .projeto:hover .projeto-img-sem-imagem img {
+
+            transform:
+                scale(1.06);
+
+        }
+
+
+        /* =========================================
+           CONTEÚDO DO PROJETO
+        ========================================= */
+
+        .projeto-content {
+
+            padding:
+                25px;
+
+        }
+
+
+        .projeto-tag {
+
+            display:
+                inline-block;
+
+            color:
+                var(--dourado);
+
+            font-size:
+                12px;
+
+            font-weight:
+                bold;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1.5px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .projeto-content h3 {
+
+            font-size:
+                23px;
+
+            margin-bottom:
+                12px;
+
+        }
+
+
+        .projeto-content p {
+
+            color:
+                var(--texto);
+
+            line-height:
+                1.7;
+
+            font-size:
+                15px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .tecnologias {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .tech {
+
+            background:
+                rgba(212, 175, 55, 0.1);
+
+            color:
+                var(--dourado);
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                20px;
+
+            font-size:
+                12px;
+
+        }
+
+
+        /* =========================================
+           TECNOLOGIAS
+        ========================================= */
+
+        .skills {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                15px;
+
+        }
+
+
+        .skill {
+
+            background:
+                var(--preto-claro);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.07);
+
+            padding:
+                15px 20px;
+
+            border-radius:
+                10px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .skill:hover {
+
+            border-color:
+                var(--dourado);
+
+            color:
+                var(--dourado);
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =========================================
+           CONTATO
+        ========================================= */
+
+        .contato-box {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #171717,
+                    #0d0d0d
+                );
+
+            border:
+                1px solid rgba(212, 175, 55, 0.2);
+
+            border-radius:
+                25px;
+
+            padding:
+                60px;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .contato-box::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                300px;
+
+            height:
+                300px;
+
+            background:
+                rgba(212, 175, 55, 0.06);
+
+            border-radius:
+                50%;
+
+            filter:
+                blur(80px);
+
+            top:
+                -150px;
+
+            right:
+                -100px;
+
+        }
+
+
+        .contato-box > * {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+        }
+
+
+        .contato-box h2 {
+
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .contato-box h2 span {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        .contato-box p {
+
+            color:
+                var(--texto);
+
+            max-width:
+                600px;
+
+            margin:
+                0 auto 30px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding:
+                30px 25px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.05);
+
+            text-align:
+                center;
+
+            color:
+                #777;
+
+        }
+
+
+        footer span {
+
+            color:
+                var(--dourado);
+
+        }
+
+
+        /* =========================================
+           WHATSAPP FLUTUANTE
+        ========================================= */
+
+        .whatsapp {
+
+            position:
+                fixed;
+
+            right:
+                25px;
+
+            bottom:
+                25px;
+
+            width:
+                60px;
+
+            height:
+                60px;
+
+            border-radius:
+                50%;
+
+            background:
+                #25d366;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                28px;
+
+            z-index:
+                999;
+
+            box-shadow:
+                0 10px 30px rgba(37, 211, 102, 0.3);
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .whatsapp:hover {
+
+            transform:
+                scale(1.1);
+
+        }
+
+
+        /* =========================================
+           RESPONSIVIDADE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .hero {
+
+                text-align:
+                    center;
+
+            }
+
+
+            .hero p {
+
+                margin:
+                    0 auto 35px;
+
+            }
+
+
+            .botoes {
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .foto-container {
+
+                margin-top:
+                    20px;
+
+            }
+
+
+            .sobre-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .servicos-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .menu {
+
+                display:
+                    none;
+
+            }
+
+
+            .menu.active {
+
+                display:
+                    flex;
+
+                position:
+                    absolute;
+
+                top:
+                    80px;
+
+                left:
+                    0;
+
+                width:
+                    100%;
+
+                background:
+                    #0b0b0b;
+
+                flex-direction:
+                    column;
+
+                padding:
+                    25px;
+
+                gap:
+                    20px;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.1);
+
+            }
+
+
+            .menu-mobile {
+
+                display:
+                    block;
+
+            }
+
+
+            .hero {
+
+                padding-top:
+                    110px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(42px, 13vw, 60px);
+
+            }
+
+
+            .foto-card {
+
+                width:
+                    290px;
+
+                height:
+                    380px;
+
+            }
+
+
+            .foto-container::before {
+
+                width:
+                    280px;
+
+                height:
+                    280px;
+
+            }
+
+
+            .servicos-grid,
+            .projetos-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .stats {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .contato-box {
+
+                padding:
+                    40px 20px;
+
+            }
+
+
+            section {
+
+                padding:
+                    80px 20px;
+
+            }
+
+
+            .whatsapp {
+
+                right:
+                    18px;
+
+                bottom:
+                    18px;
+
+                width:
+                    55px;
+
+                height:
+                    55px;
+
+                font-size:
+                    25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <nav>
+
+            <a
+                href="#inicio"
+                class="logo"
+            >
+                GUSTAVO<span>.DEV</span>
+            </a>
+
+
+            <ul
+                class="menu"
+                id="menu"
+            >
+
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#servicos">
+                        Serviços
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projetos">
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tecnologias">
+                        Tecnologias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div
+                class="menu-mobile"
+                id="menuMobile"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+
+    <section
+        class="hero"
+        id="inicio"
+    >
+
+        <div class="hero-container">
+
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    Desenvolvedor Web
+                </div>
+
+
+                <h1>
+
+                    Transformando
+                    <span>ideias</span>
+
+                    em experiências
+                    digitais.
+
+                </h1>
+
+
+                <p>
+
+                    Crio sites modernos, rápidos e responsivos
+                    para empresas, profissionais e projetos
+                    que desejam fortalecer sua presença digital.
+
+                </p>
+
+
+                <div class="botoes">
+
+                    <a
+                        href="#projetos"
+                        class="btn btn-primary"
+                    >
+                        Ver Projetos
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/5567996760185"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        Solicitar Orçamento
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOTO -->
+
+            <div class="foto-container">
+
+                <div class="foto-card">
+
+                    <img
+                        src="EU.jpg"
+                        alt="Gustavo de Araújo Santos - Desenvolvedor Web"
+                    >
+
+
+                    <div class="foto-legenda">
+
+                        <strong>
+                            Gustavo de Araújo Santos
+                        </strong>
+
+                        <span>
+                            Desenvolvedor Web • ADS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         SOBRE
+    ============================== -->
+
+    <section id="sobre">
+
+        <div class="container">
+
+            <div class="section-tag">
+                Sobre Mim
+            </div>
+
+
+            <h2 class="section-title">
+
+                Criando soluções
+                para o mundo digital.
+
+            </h2>
+
+
+            <div class="sobre-grid">
+
+
+                <div class="sobre-texto">
+
+                    <p>
+
+                        Olá! Sou
+                        <strong>
+                            Gustavo de Araújo Santos
+                        </strong>,
+                        tenho 20 anos e trabalho com criação
+                        de sites há dois anos e meio.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+
+                        Sou formado em
+                        <strong>
+                            Análise e Desenvolvimento de Sistemas
+                        </strong>
+                        pela
+                        <strong>
+                            UNIGRAN
+                        </strong>.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+
+                        Sou um desenvolvedor focado na criação
+                        de experiências digitais modernas,
+                        funcionais e personalizadas.
+
+                        Meu objetivo é transformar ideias
+                        em soluções digitais que realmente
+                        agreguem valor para empresas,
+                        profissionais e projetos.
+
+                    </p>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <h3>
+                            2,5
+                        </h3>
+
+                        <p>
+                            Anos de experiência
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>
+                            ADS
+                        </h3>
+
+                        <p>
+                            Formação • UNIGRAN
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>
+                            100%
+                        </h3>
+
+                        <p>
+                            Responsivo
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>
+                            +3
+                        </h3>
+
+                        <p>
+                            Projetos desenvolvidos
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         SERVIÇOS
+    ============================== -->
+
+    <section id="servicos">
+
+        <div class="container">
+
+            <div class="section-tag">
+                Serviços
+            </div>
+
+
+            <h2 class="section-title">
+
+                Como posso ajudar você?
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Desenvolvo soluções personalizadas
+                para ajudar sua empresa ou projeto a
+                crescer no ambiente digital.
+
+            </p>
+
+
+            <div class="servicos-grid">
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Sites Profissionais
+                    </h3>
+
+                    <p>
+
+                        Sites modernos e personalizados
+                        para empresas e profissionais
+                        que desejam ter uma presença
+                        digital profissional.
+
+                    </p>
+
+                </div>
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Landing Pages
+                    </h3>
+
+                    <p>
+
+                        Páginas desenvolvidas para
+                        apresentar serviços, produtos
+                        e aumentar conversões.
+
+                    </p>
+
+                </div>
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        🛒
+                    </div>
+
+                    <h3>
+                        Lojas Virtuais
+                    </h3>
+
+                    <p>
+
+                        Catálogos e lojas digitais
+                        para apresentar produtos
+                        e facilitar suas vendas online.
+
+                    </p>
+
+                </div>
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Sistemas Web
+                    </h3>
+
+                    <p>
+
+                        Sistemas personalizados com
+                        funcionalidades desenvolvidas
+                        de acordo com a necessidade
+                        do cliente.
+
+                    </p>
+
+                </div>
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        🔐
+                    </div>
+
+                    <h3>
+                        Painel Administrativo
+                    </h3>
+
+                    <p>
+
+                        Painéis para gerenciar produtos,
+                        informações e conteúdos do site
+                        de forma prática.
+
+                    </p>
+
+                </div>
+
+
+                <div class="servico-card">
+
+                    <div class="servico-icon">
+                        🛠️
+                    </div>
+
+                    <h3>
+                        Manutenção
+                    </h3>
+
+                    <p>
+
+                        Atualizações, melhorias,
+                        correções e manutenção
+                        de sites existentes.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         PROJETOS
+    ============================== -->
+
+    <section id="projetos">
+
+        <div class="container">
+
+            <div class="section-tag">
+                Portfólio
+            </div>
+
+
+            <h2 class="section-title">
+
+                Projetos Desenvolvidos
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Alguns projetos desenvolvidos utilizando
+                tecnologias modernas para criar experiências
+                funcionais e profissionais.
+
+            </p>
+
+
+            <div class="projetos-grid">
+
+
+                <!-- ==============================
+                     PROJETO 1
+                ============================== -->
+
+                <a
+                    href="https://hospedagens.github.io/Chuteira-do-Craque/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="projeto"
+                    aria-label="Abrir projeto Chuteira do Craque"
+                >
+
+                    <div class="projeto-img">
+
+                        <img
+                            src="chuteiradocraque.jpg"
+                            alt="Preview da loja Chuteira do Craque"
+                            loading="lazy"
+                        >
+
+
+                        <div class="projeto-overlay">
+
+                            <span>
+                                🔗 Ver projeto
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="projeto-content">
+
+                        <div class="projeto-tag">
+                            E-commerce
+                        </div>
+
+
+                        <h3>
+                            Chuteira do Craque
+                        </h3>
+
+
+                        <p>
+
+                            Desenvolvimento de uma loja virtual
+                            moderna para venda de chuteiras,
+                            com catálogo de produtos, páginas
+                            individuais, painel administrativo
+                            e integração com banco de dados.
+
+                        </p>
+
+
+                        <div class="tecnologias">
+
+                            <span class="tech">
+                                HTML5
+                            </span>
+
+                            <span class="tech">
+                                CSS3
+                            </span>
+
+                            <span class="tech">
+                                JavaScript
+                            </span>
+
+                            <span class="tech">
+                                Supabase
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ==============================
+                     PROJETO 2
+                ============================== -->
+
+                <a
+                    href="https://hospedagens.github.io/Historia-Do-Brasil/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="projeto"
+                    aria-label="Abrir projeto História do Brasil"
+                >
+
+                    <div class="projeto-img-sem-imagem">
+
+                        <img
+                            src="historiadoBrasil.png"
+                            alt="Preview do projeto História do Brasil"
+                            loading="lazy"
+                        >
+						
+						<div class="projeto-overlay">
+
+                            <span>
+                                🔗 Ver projeto
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="projeto-content">
+
+                        <div class="projeto-tag">
+                            Projeto Educacional
+                        </div>
+
+
+                        <h3>
+                            História do Brasil
+                        </h3>
+
+
+                        <p>
+
+                            Site educacional desenvolvido
+                            para meu projeto da faculdade,
+                            apresentando informações sobre
+                            a história do Brasil através de
+                            uma interface simples e responsiva.
+
+                        </p>
+
+
+                        <div class="tecnologias">
+
+                            <span class="tech">
+                                HTML5
+                            </span>
+
+                            <span class="tech">
+                                CSS3
+                            </span>
+
+                            <span class="tech">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         TECNOLOGIAS
+    ============================== -->
+
+    <section id="tecnologias">
+
+        <div class="container">
+
+            <div class="section-tag">
+                Tecnologias
+            </div>
+
+
+            <h2 class="section-title">
+
+                Ferramentas que utilizo
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Tecnologias utilizadas para desenvolver
+                projetos modernos, responsivos e funcionais.
+
+            </p>
+
+
+            <div class="skills">
+
+                <div class="skill">
+                    HTML5
+                </div>
+
+                <div class="skill">
+                    CSS3
+                </div>
+
+                <div class="skill">
+                    JavaScript
+                </div>
+
+                <div class="skill">
+                    Supabase
+                </div>
+
+                <div class="skill">
+                    GitHub
+                </div>
+
+                <div class="skill">
+                    Responsive Design
+                </div>
+
+                <div class="skill">
+                    UI Design
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         CONTATO
+    ============================== -->
+
+    <section id="contato">
+
+        <div class="container">
+
+            <div class="contato-box">
+
+                <div class="section-tag">
+                    Vamos conversar
+                </div>
+
+
+                <h2>
+
+                    Tem uma ideia?
+                    <span>
+                        Vamos criar.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Está procurando um site moderno
+                    e profissional para seu negócio?
+
+                    Entre em contato e solicite
+                    um orçamento.
+
+                </p>
+
+
+                <a
+                    href="https://wa.me/5567996760185"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                >
+                    💬 Falar no WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Gustavo.dev
+        </span>
+
+        • Todos os direitos reservados.
+
+    </footer>
+
+
+
+    <!-- ==============================
+         WHATSAPP
+    ============================== -->
+
+    <a
+        href="https://wa.me/5567996760185"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp"
+        aria-label="Falar no WhatsApp"
+    >
+        💬
+    </a>
+
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script>
+
+        const menuMobile =
+            document.getElementById("menuMobile");
+
+        const menu =
+            document.getElementById("menu");
+
+
+        menuMobile.addEventListener(
+            "click",
+            function () {
+
+                menu.classList.toggle("active");
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".menu a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        menu.classList.remove("active");
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
