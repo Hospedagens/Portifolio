@@ -1,0 +1,921 @@
+
+/* ==========================================
+   GUSTAVO.DEV - ESTILOS GERAIS
+========================================== */
+
+:root {
+    --preto: #090909;
+    --preto-claro: #111;
+    --cinza: #181818;
+    --dourado: #d4af37;
+    --dourado-claro: #f5d76e;
+    --branco: #fff;
+    --texto: #bdbdbd;
+    --whatsapp: #25d366;
+    --borda: rgba(255, 255, 255, .08);
+    --raio: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--dourado);
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 25px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--dourado);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.section-description {
+    color: var(--texto);
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    min-height: 50px;
+    border: 0;
+    border-radius: 9px;
+    font-weight: 800;
+    text-align: center;
+    transition: .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--dourado);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: var(--dourado-claro);
+}
+
+.btn-secondary {
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp);
+    color: #062612;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, .22);
+}
+
+.btn-whatsapp:hover {
+    background: #36e477;
+    box-shadow: 0 14px 35px rgba(37, 211, 102, .4);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(9, 9, 9, .92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar {
+    height: 80px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--dourado);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    font-size: 14px;
+    transition: color .2s;
+}
+
+.menu a:hover {
+    color: var(--dourado);
+}
+
+.header-orcamento {
+    padding: 11px 17px;
+    min-height: 44px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: var(--dourado);
+    font-size: 27px;
+}
+
+/* ==========================================
+   ORÇAMENTO
+========================================== */
+
+.orcamento-section {
+    padding: 145px 25px 95px;
+    background: radial-gradient(
+        circle at 12% 15%,
+        #28200d,
+        #131313 48%,
+        #090909
+    );
+}
+
+.orcamento-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.orcamento-copy h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+}
+
+.orcamento-copy h1 span,
+.hero h2 span,
+.contato-box h2 span {
+    color: var(--dourado);
+}
+
+.orcamento-copy p {
+    color: var(--texto);
+    font-size: 17px;
+    max-width: 530px;
+}
+
+.orcamento-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.orcamento-beneficios span {
+    padding: 9px 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, .22);
+    background: rgba(212, 175, 55, .08);
+    color: var(--dourado-claro);
+    font-size: 13px;
+}
+
+/* FORMULÁRIO */
+
+.orcamento-form {
+    padding: 36px;
+    border: 1px solid rgba(212, 175, 55, .38);
+    border-radius: 23px;
+    background: linear-gradient(145deg, #1c1c1c, #101010);
+    box-shadow: 0 30px 75px rgba(0, 0, 0, .5);
+}
+
+.orcamento-form h2 {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.orcamento-form label {
+    display: block;
+    margin: 16px 0 8px;
+    color: var(--dourado-claro);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.orcamento-form input,
+.orcamento-form select,
+.orcamento-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #514627;
+    border-radius: 9px;
+    background: #0b0b0b;
+    color: white;
+    outline-color: var(--dourado);
+}
+
+.orcamento-form textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+.orcamento-form button {
+    margin-top: 20px;
+}
+
+.orcamento-form small {
+    display: block;
+    text-align: center;
+    color: #aaa;
+    margin-top: 12px;
+}
+
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
+
+.hero {
+    padding: 110px 25px;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 70px;
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.04;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 580px;
+    color: var(--texto);
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.foto-card {
+    position: relative;
+    max-width: 360px;
+    height: 470px;
+    margin: auto;
+    border: 4px solid var(--dourado);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px #0009;
+}
+
+.foto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.foto-legenda {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(12px);
+}
+
+.foto-legenda strong,
+.foto-legenda span {
+    display: block;
+}
+
+.foto-legenda span {
+    color: var(--dourado);
+    font-size: 13px;
+}
+
+/* ==========================================
+   SOBRE
+========================================== */
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-texto {
+    color: var(--texto);
+    font-size: 17px;
+}
+
+.sobre-texto p + p {
+    margin-top: 22px;
+}
+
+.sobre-texto strong {
+    color: var(--dourado);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat,
+.certificado-card,
+.servico-card,
+.projeto {
+    background: var(--preto-claro);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.stat {
+    padding: 25px;
+}
+
+.stat h3 {
+    color: var(--dourado);
+    font-size: 34px;
+}
+
+.stat p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+/* ==========================================
+   SERVIÇOS
+========================================== */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.servico-card:hover,
+.projeto:hover,
+.certificado-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--dourado);
+    box-shadow: 0 20px 50px #0006;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: var(--texto);
+    font-size: 15px;
+}
+
+/* ILUSTRAÇÕES DOS SERVIÇOS */
+
+.servico-visual {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(circle at 75% 20%, #40351b, #151515 70%);
+}
+
+.mock-browser {
+    width: 76%;
+    height: 73%;
+    background: #181d22;
+    border: 2px solid #40444a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px #0007;
+    transition: transform .3s;
+}
+
+.servico-card:hover .mock-browser {
+    transform: scale(1.06);
+}
+
+.mock-bar {
+    height: 20px;
+    background: #30343a;
+    border-bottom: 1px solid #444;
+}
+
+.mock-bar::before {
+    content: "● ● ●";
+    color: var(--dourado);
+    font-size: 9px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+
+.mock-hero {
+    width: 82%;
+    height: 40%;
+    margin: 13px auto 9px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #76601e, #c7a23b);
+}
+
+.mock-blocks {
+    width: 82%;
+    height: 25%;
+    margin: auto;
+    background: repeating-linear-gradient(
+        90deg,
+        #383e43 0 28%,
+        transparent 28% 35%
+    );
+}
+
+.visual-landing {
+    background: radial-gradient(circle at 75% 20%, #263e5d, #151515 70%);
+}
+
+.visual-landing .mock-hero {
+    width: 50%;
+    margin-left: 10%;
+    background: linear-gradient(#dce7fa 0 20%, #516f9b 20% 35%, #303e55 35%);
+}
+
+.visual-landing .mock-blocks {
+    background: #5793e2;
+    width: 32%;
+    height: 14%;
+    margin-left: 10%;
+    border-radius: 4px;
+}
+
+.visual-loja {
+    background: radial-gradient(circle at 75% 20%, #5a3621, #151515 70%);
+}
+
+.mock-products {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    height: 85%;
+}
+
+.mock-products span {
+    flex: 1;
+    border-radius: 5px;
+    background: linear-gradient(#ae794d 0 60%, #35383c 60%);
+}
+
+.visual-sistema {
+    background: radial-gradient(circle at 75% 20%, #204a3b, #151515 70%);
+}
+
+.mock-code {
+    display: grid;
+    place-items: center;
+    height: 80%;
+    color: #8dd7be;
+    font: bold 65px monospace;
+}
+
+.visual-painel {
+    background: radial-gradient(circle at 75% 20%, #44315b, #151515 70%);
+}
+
+.mock-chart {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 12px;
+    height: 75%;
+    padding: 20px 30px 0;
+}
+
+.mock-chart span {
+    width: 18%;
+    border-radius: 5px 5px 0 0;
+    background: #c59aff;
+}
+
+.mock-chart span:nth-child(1) { height: 45%; }
+.mock-chart span:nth-child(2) { height: 70%; }
+.mock-chart span:nth-child(3) { height: 55%; }
+.mock-chart span:nth-child(4) { height: 95%; }
+
+.visual-manutencao {
+    background: radial-gradient(circle at 75% 20%, #4d3821, #151515 70%);
+}
+
+.mock-tool {
+    display: grid;
+    place-items: center;
+    height: 80%;
+    color: var(--dourado);
+    font-size: 85px;
+}
+
+/* ==========================================
+   PROJETOS
+========================================== */
+
+.projetos-grid,
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.projeto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #222;
+}
+
+.projeto .section-tag {
+    font-size: 12px;
+}
+
+.projeto p {
+    margin-bottom: 20px;
+}
+
+.tags,
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.tags span {
+    padding: 6px 11px;
+    border-radius: 20px;
+    color: var(--dourado);
+    background: rgba(212, 175, 55, .1);
+    font-size: 12px;
+}
+
+/* ==========================================
+   CERTIFICADOS
+========================================== */
+
+.certificado-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    min-height: 310px;
+}
+
+.certificado-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.certificado-card h3 {
+    font-size: 23px;
+}
+
+.certificado-card strong {
+    color: var(--dourado);
+    margin: 10px 0;
+}
+
+.certificado-card p {
+    color: var(--texto);
+    margin-bottom: 18px;
+}
+
+.certificado-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.certificado-card .tags {
+    margin-bottom: 24px;
+}
+
+/* ==========================================
+   TECNOLOGIAS
+========================================== */
+
+.skills {
+    margin-top: 35px;
+}
+
+.skills span {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: var(--preto-claro);
+    border: 1px solid var(--borda);
+    transition: .2s;
+}
+
+.skills span:hover {
+    color: var(--dourado);
+    border-color: var(--dourado);
+}
+
+/* ==========================================
+   CONTATO E RODAPÉ
+========================================== */
+
+.contato-box {
+    padding: 65px 25px;
+    border: 1px solid rgba(212, 175, 55, .25);
+    border-radius: 25px;
+    background: linear-gradient(135deg, #171717, #0d0d0d);
+    text-align: center;
+}
+
+.contato-box h2 {
+    font-size: clamp(32px, 5vw, 54px);
+}
+
+.contato-box p {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    color: var(--texto);
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid var(--borda);
+}
+
+footer span {
+    color: var(--dourado);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    font-size: 28px;
+    box-shadow: 0 10px 30px #25d36655;
+    z-index: 900;
+    transition: .2s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1100px) {
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .orcamento-layout,
+    .hero-grid,
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .orcamento-copy,
+    .hero-content {
+        text-align: center;
+    }
+
+    .orcamento-copy p,
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .orcamento-beneficios,
+    .botoes {
+        justify-content: center;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 15px 25px;
+        background: #101010;
+        border-bottom: 1px solid var(--borda);
+        box-shadow: 0 20px 35px #0009;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px 0;
+        font-size: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-orcamento {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .section {
+        padding: 75px 20px;
+    }
+
+    .orcamento-section {
+        padding: 115px 18px 70px;
+    }
+
+    .orcamento-form {
+        padding: 25px 20px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        min-height: auto;
+    }
+
+    .hero h2 {
+        font-size: clamp(40px, 11vw, 60px);
+    }
+
+    .foto-card {
+        width: 290px;
+        height: 380px;
+    }
+
+    .servicos-grid,
+    .projetos-grid,
+    .certificados-grid,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navbar {
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    .header-orcamento {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .whatsapp-float {
+        right: 18px;
+        bottom: 18px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}

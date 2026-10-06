@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gustavo.DEV - Criação de sites, lojas virtuais e sistemas web profissionais.">
+    <title>Gustavo | Desenvolvedor Web</title>
+
+    <link rel="icon" href="ICO.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#inicio" class="logo">GUSTAVO<span>.DEV</span></a>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <a href="#orcamento" class="btn btn-whatsapp header-orcamento">
+                Orçamento
+            </a>
+
+            <button class="menu-toggle" id="menuMobile"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menu">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ORÇAMENTO NO TOPO -->
+        <section id="orcamento" class="orcamento-section">
+            <div class="container orcamento-layout">
+
+                <div class="orcamento-copy">
+                    <span class="section-tag">FALE DIRETAMENTE COMIGO</span>
+
+                    <h1>
+                        Faça seu <span>orçamento personalizado.</span>
+                    </h1>
+
+                    <p>
+                        Conte um pouco sobre seu projeto e receba
+                        um atendimento personalizado. Ao preencher
+                        o formulário, você será direcionado ao
+                        WhatsApp com as informações.
+                    </p>
+
+                    <div class="orcamento-beneficios">
+                        <span>✓ Atendimento personalizado</span>
+                        <span>✓ Sem compromisso</span>
+                        <span>✓ Soluções sob medida</span>
+                    </div>
+                </div>
+
+                <form id="formOrcamento" class="orcamento-form">
+                    <h2>Quero receber um orçamento</h2>
+
+                    <label for="clienteNome">Seu nome</label>
+                    <input
+                        type="text"
+                        id="clienteNome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        maxlength="100"
+                        required
+                    >
+
+                    <label for="clienteServico">Qual serviço você precisa?</label>
+                    <select id="clienteServico" name="servico" required>
+                        <option value="">Selecione</option>
+                        <option>Site profissional</option>
+                        <option>Landing Page</option>
+                        <option>Loja virtual</option>
+                        <option>Sistema Web</option>
+                        <option>Painel administrativo</option>
+                        <option>Manutenção de site</option>
+                        <option>Outro projeto</option>
+                    </select>
+
+                    <label for="clienteOrcamento">
+                        Qual seu orçamento aproximado?
+                    </label>
+
+                    <select id="clienteOrcamento" name="orcamento" required>
+                        <option value="">Selecione</option>
+                        <option>Até R$ 700</option>
+                        <option>R$ 700 a R$ 1.500</option>
+                        <option>R$ 1.500 a R$ 3.000</option>
+                        <option>R$ 3.000 a R$ 5.000</option>
+                        <option>Acima de R$ 5.000</option>
+                        <option>Quero avaliar uma proposta</option>
+                    </select>
+
+                    <label for="clienteDetalhes">Descreva seu projeto</label>
+                    <textarea
+                        id="clienteDetalhes"
+                        name="detalhes"
+                        placeholder="Ex.: Preciso de um site para minha empresa..."
+                        maxlength="1200"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn btn-whatsapp btn-full">
+                        💬 Enviar para o Gustavo
+                    </button>
+
+                    <small>
+                        Você poderá revisar a mensagem antes de enviar.
+                    </small>
+                </form>
+            </div>
+        </section>
+
+        <!-- APRESENTAÇÃO -->
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <span class="section-tag">DESENVOLVEDOR WEB</span>
+
+                    <h2>
+                        Transformando <span>ideias</span>
+                        em experiências digitais.
+                    </h2>
+
+                    <p>
+                        Crio sites modernos, rápidos e responsivos
+                        para empresas, profissionais e projetos que
+                        desejam fortalecer sua presença digital.
+                    </p>
+
+                    <div class="botoes">
+                        <a href="#projetos" class="btn btn-primary">
+                            Ver projetos
+                        </a>
+
+                        <a href="#orcamento" class="btn btn-whatsapp">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <div class="foto-card">
+                    <img
+                        src="EU.jpg"
+                        alt="Gustavo de Araújo Santos"
+                    >
+
+                    <div class="foto-legenda">
+                        <strong>Gustavo de Araújo Santos</strong>
+                        <span>Desenvolvedor Web • ADS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <span class="section-tag">SOBRE MIM</span>
+
+                <h2 class="section-title">
+                    Criando soluções para o mundo digital.
+                </h2>
+
+                <div class="sobre-grid">
+                    <div class="sobre-texto">
+                        <p>
+                            Olá! Sou <strong>Gustavo de Araújo Santos</strong>,
+                            tenho 20 anos e trabalho com criação de sites
+                            há dois anos e meio.
+                        </p>
+
+                        <p>
+                            Sou formado em
+                            <strong>Análise e Desenvolvimento de Sistemas</strong>
+                            pela <strong>UNIGRAN</strong>.
+                        </p>
+
+                        <p>
+                            Meu objetivo é transformar ideias em soluções
+                            digitais modernas, funcionais e personalizadas
+                            que agreguem valor para empresas e profissionais.
+                        </p>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>2,5</h3>
+                            <p>Anos de experiência</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>ADS</h3>
+                            <p>Formação • UNIGRAN</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Responsivo</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>+5</h3>
+                            <p>Projetos desenvolvidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="section">
+            <div class="container">
+                <span class="section-tag">SERVIÇOS</span>
+
+                <h2 class="section-title">
+                    Como posso ajudar você?
+                </h2>
+
+                <p class="section-description">
+                    Desenvolvo soluções personalizadas para ajudar
+                    sua empresa ou projeto a crescer no ambiente digital.
+                </p>
+
+                <div class="servicos-grid">
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-site">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-hero"></div>
+                                <div class="mock-blocks"></div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Sites Profissionais</h3>
+                            <p>
+                                Sites modernos e personalizados para
+                                empresas e profissionais que desejam
+                                uma presença digital profissional.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-landing">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-hero"></div>
+                                <div class="mock-blocks"></div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Landing Pages</h3>
+                            <p>
+                                Páginas para apresentar serviços,
+                                produtos e aumentar conversões.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-loja">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-products">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Lojas Virtuais</h3>
+                            <p>
+                                Catálogos e lojas digitais para
+                                apresentar produtos e facilitar
+                                vendas online.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-sistema">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-code">&lt;/&gt;</div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Sistemas Web</h3>
+                            <p>
+                                Sistemas personalizados com
+                                funcionalidades desenvolvidas
+                                conforme a necessidade do cliente.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-painel">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-chart">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Painel Administrativo</h3>
+                            <p>
+                                Painéis para gerenciar produtos,
+                                informações e conteúdos de forma prática.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-visual visual-manutencao">
+                            <div class="mock-browser">
+                                <div class="mock-bar"></div>
+                                <div class="mock-tool">⚙</div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Manutenção</h3>
+                            <p>
+                                Atualizações, melhorias, correções
+                                e manutenção de sites existentes.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+            <div class="container">
+                <span class="section-tag">PORTFÓLIO</span>
+                <h2 class="section-title">Projetos Desenvolvidos</h2>
+
+                <p class="section-description">
+                    Alguns projetos que desenvolvi utilizando
+                    tecnologias modernas.
+                </p>
+
+                <div class="projetos-grid">
+
+                    <a class="projeto"
+                       href="https://hospedagens.github.io/Chuteira-do-Craque/"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="chuteiradocraque.jpg"
+                             alt="Chuteira do Craque" loading="lazy">
+                        <div class="card-content">
+                            <span class="section-tag">E-COMMERCE</span>
+                            <h3>Chuteira do Craque</h3>
+                            <p>
+                                Loja virtual com catálogo, páginas de
+                                produtos, painel administrativo e
+                                integração com banco de dados.
+                            </p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span>
+                                <span>JavaScript</span><span>Supabase</span>
+                                <span>WhatsApp API</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="projeto"
+                       href="https://hospedagens.github.io/Historia-Do-Brasil/"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="historiadoBrasil.png"
+                             alt="História do Brasil" loading="lazy">
+                        <div class="card-content">
+                            <span class="section-tag">EDUCACIONAL</span>
+                            <h3>História do Brasil</h3>
+                            <p>
+                                Site educacional responsivo
+                                desenvolvido para um projeto acadêmico.
+                            </p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="projeto"
+                       href="https://hospedagens.github.io/SolarTech/"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="SolarTech.png"
+                             alt="SolarTech Energia" loading="lazy">
+                        <div class="card-content">
+                            <span class="section-tag">LANDING PAGE</span>
+                            <h3>SolarTech Energia</h3>
+                            <p>
+                                Landing page para uma empresa fictícia
+                                de energia solar, focada em orçamentos.
+                            </p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Google Fonts</span>
+                                <span>Unsplash</span>
+                                <span>WhatsApp API</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="projeto"
+                       href="https://hospedagens.github.io/Painel-ADM/"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="paineladm.png"
+                             alt="Painel Pantanal Tech" loading="lazy">
+                        <div class="card-content">
+                            <span class="section-tag">DASHBOARD</span>
+                            <h3>Pantanal Tech</h3>
+                            <p>
+                                Painel administrativo para análise
+                                de clientes, projetos, finanças e relatórios.
+                            </p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span>
+                                <span>JavaScript</span><span>Chart.js</span>
+                                <span>Font Awesome</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="projeto"
+                       href="https://hospedagens.github.io/CALCULADORA/"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="calculadora.png"
+                             alt="Calculadora PWA" loading="lazy">
+                        <div class="card-content">
+                            <span class="section-tag">PWA</span>
+                            <h3>Calculadora</h3>
+                            <p>
+                                Aplicativo responsivo e instalável,
+                                com suporte ao uso offline.
+                            </p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span>
+                                <span>JavaScript</span><span>PWA</span>
+                                <span>Service Worker</span>
+                                <span>LocalStorage</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICADOS -->
+        <section id="certificados" class="section">
+            <div class="container">
+                <span class="section-tag">CERTIFICAÇÕES</span>
+                <h2 class="section-title">Cursos e Certificados</h2>
+
+                <p class="section-description">
+                    Certificações que complementam minha formação.
+                </p>
+
+                <div class="certificados-grid">
+                    <article class="certificado-card">
+                        <span class="certificado-icon">🐍</span>
+                        <h3>Python 3 - Mundo 1</h3>
+                        <strong>Curso em Vídeo</strong>
+                        <p>
+                            Curso introdutório de Python 3,
+                            com atividades e avaliações.
+                        </p>
+                        <div class="tags">
+                            <span>40 horas</span>
+                            <span>Março de 2026</span>
+                            <span>Python</span>
+                        </div>
+                        <a href="certificado-python.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary">
+                            Ver certificado
+                        </a>
+                    </article>
+
+                    <article class="certificado-card">
+                        <span class="certificado-icon">🌐</span>
+                        <h3>Inglês Básico</h3>
+                        <strong>Prime Cursos do Brasil</strong>
+                        <p>
+                            Curso de inglês com vocabulário,
+                            conversação e situações cotidianas.
+                        </p>
+                        <div class="tags">
+                            <span>50 horas</span>
+                            <span>Maio de 2026</span>
+                            <span>Inglês</span>
+                        </div>
+                        <a href="certificado-ingles.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary">
+                            Ver certificado
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS -->
+        <section id="tecnologias" class="section">
+            <div class="container">
+                <span class="section-tag">TECNOLOGIAS</span>
+                <h2 class="section-title">Ferramentas que utilizo</h2>
+
+                <div class="skills">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Supabase</span>
+                    <span>GitHub</span>
+                    <span>Responsive Design</span>
+                    <span>UI Design</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+            <div class="container">
+                <div class="contato-box">
+                    <span class="section-tag">VAMOS CONVERSAR</span>
+
+                    <h2>Tem uma ideia? <span>Vamos criar.</span></h2>
+
+                    <p>
+                        Está procurando um site moderno e
+                        profissional para seu negócio?
+                        Solicite um orçamento.
+                    </p>
+
+                    <a href="#orcamento" class="btn btn-whatsapp">
+                        💬 Solicitar orçamento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        © 2026 <span>Gustavo.dev</span> • Todos os direitos reservados.
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a
+        href="https://wa.me/5567996760185"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com Gustavo no WhatsApp"
+    >💬</a>
+
+</body>
+</html>
