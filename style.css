@@ -665,44 +665,155 @@ h1, h2, h3 {
     font-size: 12px;
 }
 
+
 /* ==========================================
    CERTIFICADOS
 ========================================== */
 
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
 .certificado-card {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    min-height: 310px;
+    padding: 25px;
+    min-width: 0;
+    background: var(--preto-claro);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    overflow: hidden;
+    transition: .3s ease;
 }
 
-.certificado-icon {
-    font-size: 32px;
-    margin-bottom: 15px;
+.certificado-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--dourado);
+    box-shadow: 0 20px 50px #0006;
 }
+
+/* PRÉVIA DOS CERTIFICADOS */
+
+
+.certificado-preview {
+    width: 75%;
+    height: 200px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid var(--dourado);
+}
+
+.certificado-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.certificado-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* IMAGENS DOS CERTIFICADOS */
+
+.certificado-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+}
+
+/* TÍTULOS */
 
 .certificado-card h3 {
-    font-size: 23px;
+    font-size: 21px;
+    line-height: 1.4;
+    color: var(--branco);
+    margin-bottom: 8px;
 }
+
+/* INSTITUIÇÃO */
 
 .certificado-card strong {
     color: var(--dourado);
     margin: 10px 0;
+    font-size: 15px;
 }
+
+/* DESCRIÇÃO */
 
 .certificado-card p {
     color: var(--texto);
+    font-size: 14px;
+    line-height: 1.7;
     margin-bottom: 18px;
 }
+
+/* TAGS */
+
+.certificado-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 24px;
+}
+
+.certificado-card .tags span {
+    padding: 6px 11px;
+    border-radius: 20px;
+    color: var(--dourado);
+    background: rgba(212, 175, 55, .1);
+    font-size: 12px;
+}
+
+/* BOTÃO */
 
 .certificado-card .btn {
     margin-top: auto;
     align-self: flex-start;
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+    transition: .3s ease;
 }
 
-.certificado-card .tags {
-    margin-bottom: 24px;
+.certificado-card .btn:hover {
+    background: var(--dourado);
+    color: #000;
 }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 650px) {
+    .certificados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificado-card {
+        padding: 18px;
+    }
+
+    .certificado-card h3 {
+        font-size: 18px;
+    }
+
+    .certificado-preview {
+        margin-bottom: 18px;
+    }
+
+    .certificado-card .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 
 /* ==========================================
    TECNOLOGIAS
